@@ -1124,3 +1124,460 @@ h1, h2, h3, h4, h5,
         .comment-list li .comment-body .reply:hover {
           color: #000;
           background: #e3e3e3; }
+
+/* Portfolio cleanup overrides */
+:root {
+  --pedro-ink: #141414;
+  --pedro-brown: #2f251d;
+  --pedro-accent: #b98745;
+  --pedro-sand: #fbf7f1;
+  --pedro-border: rgba(20, 20, 20, 0.08);
+  --pedro-shadow: 0 28px 60px rgba(20, 20, 20, 0.12);
+}
+
+body {
+  color: #4d4a46;
+  background: #ffffff;
+}
+
+.header-logo .site-logo {
+  font-family: "metropolis-semibold", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.header-logo .site-logo:hover,
+.header-logo .site-logo:focus {
+  color: #ffffff;
+}
+
+.section-header .display-1 {
+  max-width: 15ch;
+}
+
+.s-home::before {
+  opacity: 1;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.56) 48%, rgba(0, 0, 0, 0.36) 100%);
+}
+
+.home-content__main {
+  max-width: 76rem;
+  padding-right: 0;
+}
+
+.home-content h1 {
+  text-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.home-content h1 + p {
+  max-width: 56rem;
+  font-size: 3.1rem;
+  margin-bottom: 0;
+}
+
+.home-sidelinks {
+  right: 4rem;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.22);
+}
+
+.home-sidelinks li {
+  background-color: rgba(17, 17, 17, 0.52);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.home-sidelinks a {
+  padding-right: 12rem;
+}
+
+.s-about {
+  background: linear-gradient(180deg, var(--pedro-sand) 0%, #ffffff 100%);
+}
+
+.process {
+  margin-top: 5.4rem;
+}
+
+.process__vline-left,
+.process__vline-right {
+  display: none;
+}
+
+.process__col {
+  min-height: 0;
+  padding: 0 1.2rem 2.4rem;
+}
+
+.process__col::before {
+  left: 3.2rem;
+  top: 3.2rem;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.92);
+}
+
+.process__text {
+  margin-left: 0;
+  padding: 9rem 3.2rem 3rem;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(20, 20, 20, 0.04);
+  border-radius: 2.4rem;
+  box-shadow: var(--pedro-shadow);
+}
+
+.process h4 {
+  font-size: 2.3rem;
+}
+
+.process__text .lead {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  margin-bottom: 0;
+  color: #66625d;
+}
+
+.s-works {
+  padding-bottom: 18rem;
+}
+
+.masonry-wrap {
+  width: min(1180px, calc(100% - 2.4rem));
+  margin-top: 5.4rem;
+}
+
+.masonry {
+  margin: 0 -12px;
+}
+
+.masonry__brick {
+  padding: 12px;
+}
+
+.item-folio {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid var(--pedro-border);
+  border-radius: 2.4rem;
+  box-shadow: var(--pedro-shadow);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.item-folio:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 36px 72px rgba(20, 20, 20, 0.16);
+}
+
+.item-folio__thumb {
+  position: relative;
+  flex-shrink: 0;
+  aspect-ratio: 4 / 4.1;
+  overflow: hidden;
+  background: #ece6df;
+  border-radius: 2.4rem 2.4rem 0 0;
+}
+
+.item-folio__thumb a {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+
+.item-folio__thumb a::before {
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0.06) 0%, rgba(17, 17, 17, 0.42) 100%);
+}
+
+.item-folio__thumb a::after {
+  content: "View";
+  width: auto;
+  height: auto;
+  line-height: 1;
+  margin: 0;
+  padding: 1.1rem 1.8rem;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.8);
+  color: #ffffff;
+  font-family: "metropolis-semibold", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.24rem;
+  text-transform: uppercase;
+  left: 2.4rem;
+  top: 2.4rem;
+}
+
+.item-folio__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-folio__text {
+  position: static;
+  padding: 2.4rem 2.4rem 0.8rem;
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+}
+
+.item-folio__title {
+  font-size: 2rem;
+  color: var(--pedro-ink);
+}
+
+.item-folio__caption {
+  display: block;
+  padding: 0 2.4rem 2.4rem;
+}
+
+.item-folio__caption p {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #6c665d;
+}
+
+.item-folio:hover .item-folio__text {
+  transform: none;
+}
+
+.testimonials-wrap {
+  margin-top: 10rem;
+}
+
+.testimonials-card {
+  padding: clamp(3.2rem, 5vw, 5.6rem);
+  border-radius: 3.2rem;
+  background:
+    radial-gradient(circle at top right, rgba(185, 135, 69, 0.18), transparent 28%),
+    linear-gradient(135deg, var(--pedro-ink) 0%, var(--pedro-brown) 100%);
+  box-shadow: 0 32px 80px rgba(20, 20, 20, 0.24);
+}
+
+.testimonials-kicker {
+  margin: 0 0 3rem;
+  font-family: "metropolis-semibold", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.34rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.testimonials-card__inner {
+  display: grid;
+  grid-template-columns: minmax(18rem, 24rem) 1fr;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.testimonials-card__avatar {
+  width: 100%;
+  max-width: 24rem;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 2.4rem;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.3);
+}
+
+.testimonials-card__name,
+.testimonials-card__role {
+  margin-bottom: 0;
+}
+
+.testimonials-card__name {
+  font-family: "domine-bold", sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.testimonials-card__role {
+  margin-top: 0.8rem;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.18rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.testimonials-card blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+.testimonials-card blockquote::before {
+  display: none;
+}
+
+.testimonials-card blockquote p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2rem;
+  line-height: 1.8;
+}
+
+.s-contact {
+  background:
+    linear-gradient(135deg, rgba(12, 12, 12, 0.94), rgba(39, 31, 25, 0.9)),
+    url("../images/a.jpg") center/cover no-repeat;
+}
+
+.contact-main {
+  margin-top: 10.8rem;
+}
+
+.contact-main p {
+  margin-bottom: 0;
+}
+
+.contact-secondary {
+  padding: 3.2rem;
+  min-height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2.4rem;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.contact-address {
+  margin-bottom: 0;
+  font-size: 2.4rem;
+}
+
+.contact-social {
+  margin-left: 0;
+}
+
+.cl-copyright {
+  margin-top: 5.4rem;
+  text-align: center;
+}
+
+.cl-copyright span {
+  font-size: 1.5rem;
+}
+
+.cl-copyright span::after {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .home-content h1 + p {
+    font-size: 2.8rem;
+  }
+
+  .testimonials-card__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .home-content h1 + p {
+    font-size: 2.5rem;
+    padding-left: 0;
+    padding-top: 3rem;
+  }
+
+  .home-content h1 + p::before {
+    top: 0;
+    left: 0;
+  }
+
+  .home-sidelinks {
+    right: 2rem;
+  }
+
+  .process__col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .process__col::before {
+    left: 2.4rem;
+  }
+
+  .process__text {
+    padding: 8rem 2.4rem 2.6rem;
+  }
+
+  .masonry {
+    margin: 0 -8px;
+  }
+
+  .masonry__brick {
+    padding: 8px;
+  }
+
+  .contact-secondary {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-logo .site-logo {
+    font-size: 1.9rem;
+  }
+
+  .home-content__main {
+    max-width: 100%;
+  }
+
+  .home-content h1 {
+    font-size: 6.2rem;
+  }
+
+  .home-content h1 + p {
+    font-size: 2.2rem;
+  }
+
+  .home-sidelinks {
+    display: none;
+  }
+
+  .item-folio__thumb {
+    aspect-ratio: 1 / 1;
+  }
+
+  .item-folio__text {
+    padding: 2rem 2rem 0.8rem;
+  }
+
+  .item-folio__caption {
+    padding: 0 2rem 2rem;
+  }
+
+  .testimonials-wrap {
+    margin-top: 7.2rem;
+  }
+
+  .testimonials-card {
+    padding: 3rem 2.2rem;
+    border-radius: 2.4rem;
+  }
+
+  .testimonials-kicker {
+    letter-spacing: 0.24rem;
+  }
+
+  .testimonials-card__name {
+    font-size: 2.8rem;
+  }
+
+  .testimonials-card blockquote p {
+    font-size: 1.8rem;
+  }
+
+  .contact-main {
+    margin-top: 8.4rem;
+  }
+
+  .contact-address {
+    font-size: 1.9rem;
+  }
+}
